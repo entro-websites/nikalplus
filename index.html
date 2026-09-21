@@ -4,40 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nikal Plus - PVC i ALU stolarija Smederevska Palanka</title>
-<meta name="description" content="Nikal Plus - proizvođač i izvođač PVC i ALU stolarije, roletni, komarnika i vrata iz Smederevske Palanke. Iskoristi subvenciju do 200.000 RSD.">
+<meta name="description" content="Nikal Plus - proizvođač i izvođač PVC i ALU stolarije iz Smederevske Palanke, tradicija od 1998. Besplatno merenje, isporuka, demontaža i montaža. Subvencija do 200.000 RSD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --accent: #c90000;
-    --accent-dark: #8a0000;
-    --accent-darker: #5e0000;
-    --accent-soft: #fbe6e6;
-    --accent-glow: rgba(201, 0, 0, 0.14);
-    --accent-line: rgba(201, 0, 0, 0.18);
+    --accent-dark: #9a0000;
+    --accent-darker: #5c0000;
+    --accent-deep: #2a0707;
+    --accent-soft: #fbeaea;
+    --accent-tint: #fdf4f4;
+    --accent-glow: rgba(201, 0, 0, 0.18);
+    --accent-line: rgba(201, 0, 0, 0.20);
 
-    --text: rgba(20, 18, 18, 0.94);
-    --text-muted: rgba(20, 18, 18, 0.68);
-    --text-faint: rgba(20, 18, 18, 0.45);
+    --ink: #151111;
+    --ink-2: #1e1818;
+    --text: rgba(21, 17, 17, 0.94);
+    --text-muted: rgba(21, 17, 17, 0.66);
+    --text-faint: rgba(21, 17, 17, 0.44);
+    --line: rgba(21, 17, 17, 0.08);
+    --line-strong: rgba(21, 17, 17, 0.14);
 
-    --bg: #fdfbfb;
-    --bg-alt: #f7f2f2;
+    --on-dark: rgba(255, 255, 255, 0.94);
+    --on-dark-muted: rgba(255, 255, 255, 0.68);
+    --on-dark-faint: rgba(255, 255, 255, 0.40);
+    --on-dark-line: rgba(255, 255, 255, 0.12);
+
+    --bg: #fcfafa;
+    --bg-alt: #f5f1f1;
 
     --radius-btn: 4px;
-    --radius-card: 14px;
-
+    --radius-card: 8px;
     --max: 1280px;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 
   body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     color: var(--text);
     background: var(--bg);
-    font-weight: 400;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
@@ -46,14 +57,14 @@
     font-family: 'Orbitron', sans-serif;
     color: var(--text);
     margin: 0;
-    line-height: 1.15;
+    line-height: 1.16;
+    letter-spacing: -0.01em;
   }
 
   p { margin: 0; }
-
   a { text-decoration: none; color: inherit; }
-
   img { max-width: 100%; display: block; }
+  ul { margin: 0; padding: 0; list-style: none; }
 
   .wrap {
     max-width: var(--max);
@@ -61,20 +72,60 @@
     padding-left: 24px;
     padding-right: 24px;
   }
-
   @media (max-width: 768px) {
     .wrap { padding-left: 20px; padding-right: 20px; }
   }
 
+  section {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  @media (max-width: 768px) {
+    section { padding-top: 96px; padding-bottom: 96px; }
+  }
+
   .eyebrow {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     font-family: 'Orbitron', sans-serif;
     font-size: 12px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--accent-dark);
+    color: var(--accent);
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background: currentColor;
+  }
+  .on-dark .eyebrow { color: #ff8a8a; }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .section-head h2 {
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 700;
+  }
+  .section-head p {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 52ch;
+  }
+  .section-head.solo { grid-template-columns: 1fr; max-width: 760px; }
+  .section-head.solo p { margin-top: 20px; }
+  .on-dark .section-head h2 { color: #fff; }
+  .on-dark .section-head p { color: var(--on-dark-muted); }
+  @media (max-width: 900px) {
+    .section-head { grid-template-columns: 1fr; gap: 20px; margin-bottom: 48px; }
   }
 
   /* BUTTONS */
@@ -82,97 +133,114 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 16px 32px;
+    gap: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 28px;
+    padding-right: 28px;
     border-radius: var(--radius-btn);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.01em;
+    font-size: 16px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   }
+  .btn svg { width: 20px; height: 20px; transition: transform 0.2s ease; }
+  .btn:hover svg { transform: translateX(4px); }
 
   .btn-primary {
     background: var(--accent);
     color: #fff;
-    box-shadow: 0 10px 24px -8px var(--accent-glow);
+    box-shadow: 0 12px 28px -12px var(--accent-glow);
   }
   .btn-primary:hover {
     background: var(--accent-dark);
     transform: translateY(-2px);
-    box-shadow: 0 16px 30px -8px var(--accent-glow);
+    box-shadow: 0 20px 36px -12px rgba(201, 0, 0, 0.36);
   }
 
   .btn-outline {
     background: transparent;
     color: var(--text);
-    border: 2px solid rgba(20,18,18,0.15);
+    border-color: var(--line-strong);
   }
-  .btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent-dark);
-  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-  .btn-light {
-    background: #fff;
-    color: var(--accent-dark);
+  /* TOP BAR */
+  .topbar {
+    background: var(--ink);
+    color: var(--on-dark-muted);
+    font-size: 12px;
+    font-weight: 500;
   }
-  .btn-light:hover {
-    background: var(--accent-soft);
-    transform: translateY(-2px);
+  .topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    gap: 24px;
   }
+  .topbar-group { display: flex; gap: 28px; align-items: center; }
+  .topbar-item { display: inline-flex; align-items: center; gap: 8px; }
+  .topbar-item svg { width: 16px; height: 16px; stroke: #ff8a8a; }
+  .topbar a:hover { color: #fff; }
+  @media (max-width: 991px) { .topbar { display: none; } }
 
   /* HEADER */
   header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(253, 251, 251, 0.98);
-    border-bottom: 1px solid rgba(20,18,18,0.07);
+    background: rgba(252, 250, 250, 0.98);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
   }
   header.scrolled {
-    background: rgba(253, 251, 251, 0.86);
+    background: rgba(252, 250, 250, 0.84);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px -16px rgba(21, 17, 17, 0.16);
   }
-
   .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 84px;
   }
+  .logo img { height: 40px; width: auto; }
 
-  .logo img {
-    height: 38px;
-    width: auto;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links > a:not(.btn) {
+    font-size: 16px;
     font-weight: 600;
     color: var(--text-muted);
-    transition: color 0.15s ease;
+    position: relative;
+    transition: color 0.2s ease;
   }
-  .nav-links a:hover { color: var(--accent-dark); }
-
-  .nav-cta { margin-left: 8px; }
+  .nav-links > a:not(.btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+  .nav-links > a:not(.btn):hover { color: var(--text); }
+  .nav-links > a:not(.btn):hover::after { transform: scaleX(1); }
+  .nav-links .btn { padding-top: 12px; padding-bottom: 12px; padding-left: 20px; padding-right: 20px; }
 
   .burger {
     display: none;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    width: 30px;
-    height: 24px;
+    gap: 4px;
+    width: 32px;
+    height: 32px;
     background: none;
     border: none;
     cursor: pointer;
@@ -183,600 +251,1336 @@
     height: 2px;
     width: 100%;
     background: var(--text);
-    border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
-  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
   .burger.open span:nth-child(2) { opacity: 0; }
-  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
   .mobile-menu {
     display: none;
-    flex-direction: column;
     background: #fff;
-    border-top: 1px solid rgba(20,18,18,0.08);
+    border-top: 1px solid var(--line);
     padding-top: 12px;
     padding-bottom: 24px;
   }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    padding: 14px 0;
+  .mobile-menu.open { display: block; }
+  .mobile-menu .wrap { display: flex; flex-direction: column; }
+  .mobile-menu a:not(.btn) {
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-weight: 600;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(20,18,18,0.06);
-    color: var(--text);
+    font-size: 16px;
+    border-bottom: 1px solid var(--line);
   }
-  .mobile-menu .btn { margin-top: 18px; }
+  .mobile-menu .btn { margin-top: 20px; }
+  .mobile-phones { margin-top: 20px; display: grid; gap: 8px; font-size: 16px; font-weight: 600; color: var(--text-muted); }
 
   @media (max-width: 991px) {
     .nav-links { display: none; }
     .burger { display: flex; }
+    .nav-inner { height: 72px; }
+    .logo img { height: 32px; }
   }
 
   /* HERO */
   .hero {
     position: relative;
-    padding-top: 96px;
-    padding-bottom: 96px;
-    background:
-      radial-gradient(ellipse at 78% 20%, var(--accent-glow), transparent 60%),
-      var(--bg);
+    padding-top: 0;
+    padding-bottom: 0;
+    background: var(--ink);
+    color: #fff;
     overflow: hidden;
   }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items: center;
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/89339717_1514307835394738_4448020933789089792_o.jpg');
+    background-size: cover;
+    background-position: 30% center;
   }
-
-  .hero h1 {
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 800;
-    letter-spacing: -0.01em;
-  }
-
-  .hero h1 span { color: var(--accent); }
-
-  .hero-sub {
-    margin-top: 24px;
-    font-size: 18px;
-    color: var(--text-muted);
-    max-width: 46ch;
-  }
-
-  .hero-cta-row {
-    margin-top: 36px;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .hero-badges {
-    margin-top: 44px;
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-
-  .hero-badge {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-badge svg { width: 22px; height: 22px; flex-shrink: 0; }
-
-  .hero-badge span {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-muted);
-  }
-
-  .hero-image {
-    border-radius: var(--radius-card);
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 30px 60px -20px rgba(20,18,18,0.25);
-  }
-  .hero-image img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/5; }
-
-  @media (max-width: 991px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-image { order: -1; aspect-ratio: 16/10; }
-    .hero-image img { aspect-ratio: 16/10; }
-  }
-
-  /* PAIN SECTION */
-  .pain {
-    padding-top: 64px;
-    padding-bottom: 64px;
-    background: var(--accent-darker);
-  }
-  .pain .wrap { max-width: 860px; }
-  .pain p {
-    color: rgba(255,255,255,0.92);
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.7;
-  }
-  .pain p strong { color: #fff; }
-
-  /* SECTION GENERIC */
-  section {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-
-  .section-head {
-    max-width: 640px;
-    margin-bottom: 56px;
-  }
-  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-
-  .section-head h2 {
-    font-size: clamp(1.8rem, 3.4vw, 2.4rem);
-    font-weight: 700;
-  }
-  .section-head p {
-    margin-top: 16px;
-    color: var(--text-muted);
-    font-size: 17px;
-    max-width: 60ch;
-  }
-
-  /* SERVICES */
-  .services { background: var(--bg-alt); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
-
-  .service-card {
-    background: #fff;
-    border: 1px solid rgba(20,18,18,0.07);
-    border-radius: var(--radius-card);
-    padding: 32px 26px;
-    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-  }
-  .service-card:hover {
-    box-shadow: 0 22px 44px -22px rgba(20,18,18,0.18);
-    transform: translateY(-4px);
-    border-color: var(--accent-line);
-  }
-
-  .service-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 10px;
-    background: var(--accent-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .service-icon svg { width: 24px; height: 24px; stroke: var(--accent); }
-
-  .service-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-  .service-card p {
-    font-size: 14.5px;
-    color: var(--text-muted);
-  }
-
-  @media (max-width: 991px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 560px) {
-    .services-grid { grid-template-columns: 1fr; }
-  }
-
-  /* SUBVENTIONS */
-  .subvention {
-    background: #fff;
-  }
-  .subvention-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-    background: var(--bg-alt);
-    border: 1px solid rgba(20,18,18,0.07);
-    border-radius: var(--radius-card);
-    padding: 56px;
-  }
-  .subvention-image img {
-    border-radius: 10px;
-    width: 100%;
-  }
-  .subvention-text .eyebrow { margin-bottom: 14px; }
-  .subvention-text h2 {
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    margin-bottom: 18px;
-  }
-  .subvention-text p {
-    color: var(--text-muted);
-    font-size: 16px;
-    margin-bottom: 14px;
-    max-width: 60ch;
-  }
-  .subvention-number {
-    display: inline-block;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    font-size: 2.2rem;
-    color: var(--accent);
-    margin-bottom: 6px;
-  }
-
-  @media (max-width: 900px) {
-    .subvention-box { grid-template-columns: 1fr; padding: 32px; }
-  }
-  @media (max-width: 480px) {
-    .subvention-box { padding: 24px; }
-  }
-
-  /* ABOUT */
-  .about {
-    background: var(--bg-alt);
-  }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 56px;
-    align-items: center;
-  }
-  .about-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .about-images img {
-    border-radius: var(--radius-card);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .about-images .tall { grid-row: span 2; aspect-ratio: 3/4; }
-  .about-images .short { aspect-ratio: 4/3; }
-
-  .about-text h2 {
-    font-size: clamp(1.8rem, 3.2vw, 2.3rem);
-    margin-bottom: 20px;
-  }
-  .about-text p {
-    color: var(--text-muted);
-    font-size: 16px;
-    margin-bottom: 16px;
-    max-width: 58ch;
-  }
-  .about-points {
-    margin-top: 28px;
-    display: grid;
-    gap: 16px;
-  }
-  .about-point {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-  }
-  .about-point svg { width: 22px; height: 22px; flex-shrink: 0; stroke: var(--accent); margin-top: 2px; }
-  .about-point span { font-size: 15px; font-weight: 600; color: var(--text); }
-
-  @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .about-images { order: 2; }
-  }
-
-  /* CTA CLOSE */
-  .cta-close {
-    background: var(--accent-darker);
-    position: relative;
-    overflow: hidden;
-  }
-  .cta-close::before {
+  .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 20% 30%, rgba(255,255,255,0.06), transparent 55%);
-    pointer-events: none;
+    z-index: 1;
+    background:
+      linear-gradient(90deg, rgba(21, 10, 10, 0.94) 0%, rgba(21, 10, 10, 0.82) 44%, rgba(21, 10, 10, 0.36) 100%),
+      linear-gradient(0deg, rgba(21, 10, 10, 0.72) 0%, transparent 40%);
   }
-  .cta-grid {
+  .hero .wrap { position: relative; z-index: 2; }
+  .hero-content {
+    padding-top: 144px;
+    padding-bottom: 128px;
+    max-width: 760px;
+  }
+  .hero .eyebrow { color: #ff8a8a; }
+  .hero h1 {
+    color: #fff;
+    font-size: clamp(36px, 5.2vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: #ff4d4d;
+  }
+  .hero-sub {
+    margin-top: 28px;
+    font-size: 20px;
+    color: var(--on-dark-muted);
+    max-width: 52ch;
+    font-weight: 400;
+  }
+  .hero-actions {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-phone { display: inline-flex; align-items: center; gap: 12px; }
+  .hero-phone-ico {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    display: grid;
+    place-items: center;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .hero-phone-ico svg { width: 20px; height: 20px; stroke: #fff; }
+  .hero-phone:hover .hero-phone-ico { border-color: var(--accent); background: var(--accent); }
+  .hero-phone small { display: block; font-size: 12px; color: var(--on-dark-faint); font-weight: 500; letter-spacing: 0.04em; }
+  .hero-phone strong { display: block; font-size: 20px; font-weight: 700; color: #fff; }
+
+  .hero-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--on-dark-line);
+  }
+  .hero-fact {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    padding-right: 24px;
+    border-right: 1px solid var(--on-dark-line);
+    padding-left: 24px;
+  }
+  .hero-fact:first-child { padding-left: 0; }
+  .hero-fact:last-child { border-right: none; }
+  .hero-fact b {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .hero-fact span { display: block; margin-top: 8px; font-size: 16px; color: var(--on-dark-muted); }
+  @media (max-width: 991px) {
+    .hero-content { padding-top: 96px; padding-bottom: 80px; }
+    .hero-facts { grid-template-columns: 1fr 1fr; }
+    .hero-fact:nth-child(2) { border-right: none; }
+    .hero-fact:nth-child(3) { padding-left: 0; }
+    .hero-fact:nth-child(n+3) { border-top: 1px solid var(--on-dark-line); }
+  }
+  @media (max-width: 560px) {
+    .hero-sub { font-size: 16px; }
+    .hero-fact { padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 12px; }
+    .hero-fact:nth-child(odd) { padding-left: 0; }
+    .hero-fact b { font-size: 20px; }
+    .hero-fact span { font-size: 12px; }
+    .hero-actions .btn { width: 100%; }
+  }
+
+  /* PROFILES STRIP */
+  .profiles {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+  }
+  .profiles-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .profiles-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    max-width: 24ch;
+  }
+  .profiles-list { display: flex; gap: 48px; flex-wrap: wrap; align-items: center; }
+  .profiles-list span {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    color: rgba(21, 17, 17, 0.32);
+    transition: color 0.2s ease;
+  }
+  .profiles-list span:hover { color: var(--accent); }
+  @media (max-width: 768px) {
+    .profiles-list { gap: 24px; }
+    .profiles-list span { font-size: 16px; }
+  }
+
+  /* PAIN */
+  .pain {
+    background: var(--bg);
+  }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .pain-quote {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(24px, 2.8vw, 36px);
+    font-weight: 700;
+    line-height: 1.32;
+    color: var(--text);
+  }
+  .pain-quote mark {
+    background: linear-gradient(transparent 62%, var(--accent-soft) 62%);
+    color: var(--accent);
+  }
+  .pain-text { margin-top: 28px; font-size: 16px; color: var(--text-muted); max-width: 56ch; }
+  .pain-list { display: grid; gap: 16px; }
+  .pain-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+  }
+  .pain-item .ico {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    display: grid;
+    place-items: center;
+  }
+  .pain-item .ico svg { width: 20px; height: 20px; stroke: var(--accent); }
+  .pain-item h3 { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0; }
+  .pain-item p { margin-top: 4px; font-size: 16px; color: var(--text-muted); }
+  @media (max-width: 900px) {
+    .pain-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* PRODUCTS */
+  .products { background: var(--bg-alt); }
+  .product-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: center;
+    gap: 24px;
+  }
+  .product-card {
     position: relative;
-  }
-  .cta-close h2 {
-    color: #fff;
-    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
-    margin-bottom: 18px;
-  }
-  .cta-close p {
-    color: rgba(255,255,255,0.78);
-    font-size: 16px;
-    margin-bottom: 32px;
-    max-width: 52ch;
-  }
-  .cta-contact-list {
     display: grid;
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  .cta-contact-item {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    color: rgba(255,255,255,0.9);
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .cta-contact-item svg { width: 20px; height: 20px; stroke: #fff; flex-shrink: 0; }
-
-  .cta-form {
+    grid-template-columns: 1fr 200px;
+    gap: 24px;
     background: #fff;
     border-radius: var(--radius-card);
-    padding: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    padding-right: 40px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
   }
-  .cta-form h3 {
-    font-size: 19px;
-    margin-bottom: 22px;
-    color: var(--text);
+  .product-card:hover {
+    box-shadow: 0 32px 64px -32px rgba(21, 17, 17, 0.24);
+    transform: translateY(-4px);
   }
-  .cta-form label {
-    display: block;
-    font-size: 13px;
+  .product-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+  }
+  .product-card h3 {
+    margin-top: 12px;
+    font-size: 32px;
+    font-weight: 800;
+  }
+  .product-card h3 span { color: var(--accent); }
+  .product-lead { margin-top: 16px; color: var(--text-muted); font-size: 16px; }
+  .spec-list { margin-top: 28px; display: grid; gap: 12px; }
+  .spec-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--line-strong);
+  }
+  .spec-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .spec-list svg { width: 20px; height: 20px; stroke: var(--accent); flex-shrink: 0; margin-top: 4px; }
+  .product-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 50%, var(--accent-tint), transparent 70%);
+  }
+  .product-visual img { max-height: 300px; max-width: 100%; width: auto; mix-blend-mode: multiply; }
+  @media (max-width: 1100px) {
+    .product-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .product-card { grid-template-columns: 1fr; padding-top: 32px; padding-bottom: 32px; padding-left: 24px; padding-right: 24px; }
+    .product-visual { order: -1; }
+    .product-visual img { max-height: 200px; }
+    .product-card h3 { font-size: 28px; }
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+    border-left: 1px solid var(--line-strong);
+  }
+  .service {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 36px;
+    padding-right: 36px;
+    border-right: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+    background: transparent;
+    transition: background 0.25s ease;
+    overflow: hidden;
+  }
+  .service::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 100%;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .service:hover { background: #fff; }
+  .service:hover::before { transform: scaleX(1); }
+  .service-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; }
+  .service-num {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-faint);
+    letter-spacing: 0.12em;
+  }
+  .service-icon svg { width: 40px; height: 40px; stroke: var(--accent); }
+  .service h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .service p { font-size: 16px; color: var(--text-muted); }
+  @media (max-width: 991px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .service { padding-left: 24px; padding-right: 24px; padding-top: 32px; padding-bottom: 32px; }
+  }
+
+  /* FREE / WHY */
+  .free {
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .free::before {
+    content: "";
+    position: absolute;
+    width: 720px;
+    height: 720px;
+    right: -240px;
+    top: -240px;
+    background: radial-gradient(circle, rgba(201, 0, 0, 0.28), transparent 64%);
+    pointer-events: none;
+  }
+  .free .wrap { position: relative; }
+  .free-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .free-item {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border: 1px solid var(--on-dark-line);
+    border-radius: var(--radius-card);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+  .free-item:hover { border-color: rgba(255, 77, 77, 0.48); background: rgba(201, 0, 0, 0.08); }
+  .free-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #fff;
+    background: var(--accent);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  .free-item h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .free-item p { color: var(--on-dark-muted); font-size: 16px; }
+
+  .free-bottom {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .free-wide {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+    border-radius: var(--radius-card);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .free-wide svg { width: 32px; height: 32px; stroke: #ff4d4d; flex-shrink: 0; }
+  .free-wide h3 { color: #fff; font-size: 16px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0; }
+  .free-wide p { margin-top: 4px; color: var(--on-dark-muted); font-size: 16px; }
+  @media (max-width: 1100px) { .free-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) {
+    .free-grid, .free-bottom { grid-template-columns: 1fr; }
+  }
+
+  /* SUBVENTION */
+  .subvention { background: #fff; }
+  .sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .sub-big {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-top: 12px;
+    margin-bottom: 28px;
+  }
+  .sub-big b {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: clamp(88px, 11vw, 152px);
+    line-height: 0.88;
+    color: var(--accent);
+    letter-spacing: -0.04em;
+  }
+  .sub-big span {
+    font-size: 16px;
     font-weight: 600;
-    margin-bottom: 6px;
+    color: var(--text-muted);
+    max-width: 16ch;
+    padding-bottom: 8px;
+  }
+  .sub-intro h2 { font-size: clamp(28px, 3.2vw, 40px); font-weight: 700; }
+  .sub-intro > p { margin-top: 20px; color: var(--text-muted); max-width: 52ch; }
+  .sub-amounts {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .sub-amount {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: var(--radius-card);
+    background: var(--accent-tint);
+    border: 1px solid var(--accent-line);
+  }
+  .sub-amount small { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+  .sub-amount b { display: block; margin-top: 8px; font-family: 'Orbitron', sans-serif; font-size: 20px; font-weight: 800; color: var(--accent-dark); }
+  .sub-amount span { display: block; margin-top: 4px; font-size: 12px; color: var(--text-muted); }
+  .sub-example {
+    margin-top: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-left: 4px solid var(--accent);
+    background: var(--bg-alt);
+    font-size: 16px;
     color: var(--text-muted);
   }
-  .cta-form input, .cta-form textarea {
+  .sub-example strong { color: var(--text); }
+  .sub-intro .btn { margin-top: 36px; }
+
+  .sub-panel {
+    background: var(--bg-alt);
+    border-radius: var(--radius-card);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .sub-panel + .sub-panel { margin-top: 16px; }
+  .sub-panel h3 { font-size: 16px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 24px; }
+  .check-list { display: grid; gap: 16px; }
+  .check-list li { display: flex; gap: 12px; font-size: 16px; color: var(--text); }
+  .check-list svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    padding: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    stroke: #fff;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--line-strong);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .sub-note { margin-top: 20px; font-size: 12px; color: var(--text-muted); line-height: 1.68; }
+  .sub-doc { display: flex; gap: 20px; align-items: center; }
+  .sub-doc img { width: 96px; border-radius: 4px; flex-shrink: 0; }
+  .sub-doc p { font-size: 16px; color: var(--text-muted); }
+  @media (max-width: 991px) {
+    .sub-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+  @media (max-width: 560px) {
+    .sub-amounts { grid-template-columns: 1fr; }
+    .sub-panel { padding-left: 24px; padding-right: 24px; padding-top: 32px; padding-bottom: 32px; }
+    .sub-big { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
+
+  /* PROCESS */
+  .process { background: var(--bg-alt); }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    counter-reset: step;
+    position: relative;
+  }
+  .steps::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--accent-line) 0 8px, transparent 8px 16px);
+  }
+  .step { position: relative; }
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 28px;
+    position: relative;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .step:hover .step-num { background: var(--accent); color: #fff; }
+  .step h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+  .step p { font-size: 16px; color: var(--text-muted); max-width: 30ch; }
+  @media (max-width: 991px) {
+    .steps { grid-template-columns: 1fr 1fr; gap: 48px 24px; }
+    .steps::before { display: none; }
+  }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; gap: 36px; }
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .about-visual { position: relative; padding-bottom: 64px; padding-right: 64px; }
+  .about-visual .main {
     width: 100%;
-    padding: 13px 14px;
-    border: 1px solid rgba(20,18,18,0.15);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-card);
+  }
+  .about-visual .inset {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-card);
+    border: 8px solid var(--bg);
+    background: #fff;
+  }
+  .about-stamp {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    background: var(--accent);
+    color: #fff;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: var(--radius-card);
+    box-shadow: 0 20px 40px -16px rgba(201, 0, 0, 0.5);
+  }
+  .about-stamp small { display: block; font-size: 12px; font-weight: 600; opacity: 0.84; letter-spacing: 0.08em; text-transform: uppercase; }
+  .about-stamp b { display: block; font-family: 'Orbitron', sans-serif; font-size: 32px; font-weight: 800; line-height: 1.2; }
+  .about-text h2 { font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; margin-bottom: 24px; }
+  .about-text p { color: var(--text-muted); margin-bottom: 16px; max-width: 58ch; }
+  .timeline {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line-strong);
+  }
+  .tl-item { padding-top: 24px; padding-right: 16px; }
+  .tl-item b { display: block; font-family: 'Orbitron', sans-serif; font-size: 24px; font-weight: 800; color: var(--accent); }
+  .tl-item span { display: block; margin-top: 8px; font-size: 16px; color: var(--text-muted); line-height: 1.48; }
+  @media (max-width: 991px) {
+    .about-grid { grid-template-columns: 1fr; gap: 56px; }
+  }
+  @media (max-width: 560px) {
+    .about-visual { padding-right: 32px; padding-bottom: 40px; }
+    .timeline { grid-template-columns: 1fr; }
+    .tl-item { padding-top: 20px; }
+    .about-stamp { left: 12px; top: 12px; }
+    .about-stamp b { font-size: 24px; }
+  }
+
+  /* GALLERY */
+  .gallery { background: #fff; }
+  .gal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 12px;
+  }
+  .gal-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+    cursor: zoom-in;
+    background: var(--bg-alt);
+    border: none;
+    padding: 0;
+  }
+  .gal-item.big { grid-column: span 2; grid-row: span 2; }
+  .gal-item.wide { grid-column: span 2; }
+  .gal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.3s ease;
+    filter: saturate(0.92) contrast(1.04);
+  }
+  .gal-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(21, 10, 10, 0.72), transparent 56%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gal-item span {
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
+    right: 20px;
+    z-index: 1;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .gal-item:hover img { transform: scale(1.06); filter: none; }
+  .gal-item:hover::after, .gal-item:hover span { opacity: 1; }
+  .gal-item:hover span { transform: translateY(0); }
+  @media (max-width: 991px) {
+    .gal-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+  }
+  @media (max-width: 560px) {
+    .gal-grid { grid-auto-rows: 160px; gap: 8px; }
+    .gal-item span { opacity: 1; transform: none; font-size: 12px; left: 12px; bottom: 8px; }
+    .gal-item::after { opacity: 1; }
+  }
+
+  .clients {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .clients-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+  .clients-logos { display: flex; align-items: center; gap: 56px; flex-wrap: wrap; }
+  .clients-logos img {
+    height: 44px;
+    max-width: 160px;
+    object-fit: contain;
+    width: auto;
+    filter: grayscale(1);
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .clients-logos img:hover { filter: none; opacity: 1; }
+  @media (max-width: 560px) {
+    .clients-logos { gap: 28px; }
+    .clients-logos img { height: 36px; }
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(12, 8, 8, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-height: 84vh; max-width: 100%; border-radius: 4px; }
+  .lb-btn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+  .lb-btn:hover { background: var(--accent); border-color: var(--accent); }
+  .lb-btn svg { width: 20px; height: 20px; stroke: #fff; }
+  .lb-close { top: 20px; right: 20px; }
+  .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+  .lb-caption { position: absolute; bottom: 24px; left: 0; right: 0; text-align: center; color: var(--on-dark-muted); font-size: 16px; }
+  @media (max-width: 560px) {
+    .lb-prev, .lb-next { top: auto; bottom: 64px; transform: none; }
+  }
+
+  /* CONTACT */
+  .contact {
+    background: var(--accent-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::before {
+    content: "";
+    position: absolute;
+    width: 880px;
+    height: 880px;
+    left: -320px;
+    bottom: -400px;
+    background: radial-gradient(circle, rgba(201, 0, 0, 0.36), transparent 64%);
+    pointer-events: none;
+  }
+  .contact-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact h2 { color: #fff; font-size: clamp(28px, 3.6vw, 48px); font-weight: 700; }
+  .contact-lead { margin-top: 20px; color: var(--on-dark-muted); max-width: 48ch; }
+  .people { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .person {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border: 1px solid var(--on-dark-line);
+    border-radius: var(--radius-card);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .person small { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #ff8a8a; }
+  .person h3 { margin-top: 12px; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 0; }
+  .person .role { display: block; font-size: 12px; color: var(--on-dark-faint); margin-top: 4px; }
+  .person a.tel {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.2s ease;
+  }
+  .person a.tel svg { width: 20px; height: 20px; stroke: #ff4d4d; }
+  .person a.tel:hover { color: #ff8a8a; }
+  .person a.mail { display: block; margin-top: 8px; font-size: 12px; color: var(--on-dark-muted); word-break: break-all; }
+  .person a.mail:hover { color: #fff; }
+  .contact-meta { margin-top: 32px; display: grid; gap: 16px; }
+  .contact-meta div { display: flex; gap: 12px; align-items: center; color: var(--on-dark); font-size: 16px; }
+  .contact-meta svg { width: 20px; height: 20px; stroke: #ff4d4d; flex-shrink: 0; }
+
+  .form-card {
+    background: #fff;
+    border-radius: var(--radius-card);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 48px;
+    padding-right: 48px;
+    box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.6);
+  }
+  .form-card h3 { font-size: 24px; font-weight: 700; }
+  .form-card > p { margin-top: 8px; margin-bottom: 32px; color: var(--text-muted); font-size: 16px; }
+  .field { margin-bottom: 20px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-card label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+  }
+  .form-card input, .form-card textarea, .form-card select {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 1px solid var(--line-strong);
     border-radius: var(--radius-btn);
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    margin-bottom: 18px;
+    font-size: 16px;
     background: var(--bg);
     color: var(--text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
-  .cta-form input:focus, .cta-form textarea:focus {
+  .form-card input:focus, .form-card textarea:focus, .form-card select:focus {
     outline: none;
     border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
   }
-  .cta-form textarea { min-height: 100px; resize: vertical; }
-  .cta-form .btn { width: 100%; }
-
-  @media (max-width: 900px) {
-    .cta-grid { grid-template-columns: 1fr; }
-    .cta-form { padding: 28px; }
+  .form-card textarea { min-height: 112px; resize: vertical; }
+  .form-card .btn { width: 100%; margin-top: 8px; }
+  .form-note { margin-top: 16px; font-size: 12px; color: var(--text-faint); text-align: center; }
+  @media (max-width: 991px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+  }
+  @media (max-width: 560px) {
+    .people { grid-template-columns: 1fr; }
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+    .form-card { padding-top: 32px; padding-bottom: 32px; padding-left: 24px; padding-right: 24px; }
   }
 
   /* FOOTER */
   footer {
-    background: #171212;
-    padding-top: 56px;
+    background: var(--ink);
+    padding-top: 80px;
     padding-bottom: 32px;
+    color: var(--on-dark-muted);
   }
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 40px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--on-dark-line);
   }
-  .footer-logo img { height: 32px; margin-bottom: 16px; }
-  .footer-grid p {
-    color: rgba(255,255,255,0.55);
-    font-size: 14px;
-    max-width: 32ch;
+  .footer-logo {
+    display: inline-block;
+    background: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: var(--radius-btn);
+    margin-bottom: 24px;
   }
+  .footer-logo img { height: 32px; }
+  .footer-grid p { font-size: 16px; max-width: 32ch; }
   .footer-col h4 {
     color: #fff;
-    font-size: 13px;
-    letter-spacing: 0.08em;
+    font-size: 12px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
     font-weight: 700;
   }
-  .footer-col a {
-    display: block;
-    color: rgba(255,255,255,0.6);
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
+  .footer-col a, .footer-col span { display: block; font-size: 16px; margin-bottom: 12px; }
   .footer-col a:hover { color: #fff; }
   .footer-bottom {
-    padding-top: 24px;
+    padding-top: 28px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    color: rgba(255,255,255,0.4);
-    font-size: 13px;
+    color: var(--on-dark-faint);
+    font-size: 12px;
   }
+  @media (max-width: 991px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; gap: 36px; } }
 
-  @media (max-width: 700px) {
-    .footer-grid { grid-template-columns: 1fr; }
+  /* MOBILE CALL BAR */
+  .call-bar { display: none; }
+  @media (max-width: 768px) {
+    .call-bar {
+      display: flex;
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 90;
+      gap: 8px;
+      transform: translateY(120%);
+      transition: transform 0.3s ease;
+    }
+    .call-bar.show { transform: translateY(0); }
+    .call-bar a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-radius: var(--radius-btn);
+      font-weight: 700;
+      font-size: 16px;
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
+    }
+    .call-bar svg { width: 20px; height: 20px; }
+    .call-bar .call { background: var(--ink); color: #fff; }
+    .call-bar .call svg { stroke: #fff; }
+    .call-bar .quote { background: var(--accent); color: #fff; }
+    footer { padding-bottom: 96px; }
   }
 
   /* reveal */
-  .reveal {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.pre {
-    opacity: 1;
-    transform: translateY(12px);
-  }
-  .reveal.in {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal { transition: transform 0.7s ease; }
+  .reveal.pre { transform: translateY(12px); }
+  .reveal.in { transform: translateY(0); }
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="topbar-group">
+      <span class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Majora Gavrilovića bb, Smederevska Palanka
+      </span>
+      <span class="topbar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Radnim danima 08:00 - 16:00
+      </span>
+    </div>
+    <div class="topbar-group">
+      <a class="topbar-item" href="tel:+38162238409">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+        Palanka: 062/238-409
+      </a>
+      <a class="topbar-item" href="tel:+381649098597">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+        Beograd: 064/909-8597
+      </a>
+    </div>
+  </div>
+</div>
+
 <header id="site-header">
   <div class="wrap nav-inner">
-    <a href="#" class="logo">
+    <a href="#top" class="logo">
       <img src="assets/logo.png" alt="Nikal Plus logo">
     </a>
     <nav class="nav-links">
+      <a href="#proizvodi">Proizvodi</a>
       <a href="#usluge">Usluge</a>
       <a href="#subvencije">Subvencije</a>
       <a href="#o-nama">O nama</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-primary nav-cta">Zatraži ponudu</a>
+      <a href="#radovi">Radovi</a>
+      <a href="#kontakt" class="btn btn-primary">Zakaži besplatno merenje</a>
     </nav>
-    <button class="burger" id="burgerBtn" aria-label="Otvori meni">
+    <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <div class="wrap">
+      <a href="#proizvodi">Proizvodi</a>
       <a href="#usluge">Usluge</a>
       <a href="#subvencije">Subvencije</a>
       <a href="#o-nama">O nama</a>
+      <a href="#radovi">Radovi</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-primary">Zatraži ponudu</a>
+      <a href="#kontakt" class="btn btn-primary">Zakaži besplatno merenje</a>
+      <div class="mobile-phones">
+        <a href="tel:+38162238409">Palanka: 062/238-409</a>
+        <a href="tel:+381649098597">Beograd: 064/909-8597</a>
+      </div>
     </div>
   </div>
 </header>
 
+<main id="top">
+
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">PVC i ALU stolarija · Smederevska Palanka</span>
-      <h1>Prozori koji <span>zadrže toplotu</span> u kući, ne račun za grejanje</h1>
-      <p class="hero-sub">Pravimo i ugrađujemo PVC i ALU stolariju, vrata, roletne i komarnike. Meri, isporučuje i montira ista ekipa - bez posrednika, bez čekanja tuđih rokova.</p>
-      <div class="hero-cta-row">
-        <a href="#kontakt" class="btn btn-primary">Zatraži besplatnu ponudu</a>
-        <a href="#subvencije" class="btn btn-outline">Proveri subvenciju do 200.000 RSD</a>
-      </div>
-      <div class="hero-badges">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c90000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-          <span>Proizvodnja i ugradnja iz jedne ruke</span>
-        </div>
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c90000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Rad na terenu Palanka i Beograd</span>
-        </div>
+  <div class="hero-bg" role="img" aria-label="Radnici Nikal Plus prenose staklene elemente stolarije do vozila za isporuku"></div>
+  <div class="wrap">
+    <div class="hero-content">
+      <span class="eyebrow">PVC i ALU stolarija · od 1998.</span>
+      <h1>Prozori koji zadrže toplotu u kući, <em>ne račun za grejanje</em></h1>
+      <p class="hero-sub">Sami pravimo i ugrađujemo PVC i ALU stolariju, vrata, roletne i komarnike. Merenje, isporuka, demontaža stare stolarije i montaža su besplatni.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn btn-primary">
+          Zakaži besplatno merenje
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="tel:+38162238409" class="hero-phone">
+          <span class="hero-phone-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+          </span>
+          <span>
+            <small>Ili pozovi odmah</small>
+            <strong>062/238-409</strong>
+          </span>
+        </a>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="assets/89339717_1514307835394738_4448020933789089792_o.jpg" alt="Radnik Nikal Plus nosi staklo za PVC stolariju na gradilište">
+    <div class="hero-facts">
+      <div class="hero-fact"><b>1998.</b><span>Porodična tradicija u stolariji</span></div>
+      <div class="hero-fact"><b>Salamander</b><span>Nemački PVC profili</span></div>
+      <div class="hero-fact"><b>0 RSD</b><span>Merenje, isporuka i montaža</span></div>
+      <div class="hero-fact"><b>50%</b><span>Subvencija, do 200.000 RSD</span></div>
     </div>
   </div>
 </section>
 
+<div class="profiles">
+  <div class="wrap profiles-inner">
+    <span class="profiles-label">Radimo sa profilima proizvođača</span>
+    <div class="profiles-list">
+      <span>SALAMANDER</span>
+      <span>REHAU</span>
+      <span>ALUMIL</span>
+      <span>INOUTIC</span>
+    </div>
+  </div>
+</div>
+
 <section class="pain">
+  <div class="wrap pain-grid">
+    <div>
+      <span class="eyebrow">Zvuči poznato?</span>
+      <p class="pain-quote">Grejanje radi ceo dan, a soba se ne zagreje. <mark>To nije problem kotla, to je problem stolarije.</mark></p>
+      <p class="pain-text">Stari prozori puštaju toplotu kroz dotrajale zaptivke i hladan profil. Nova stolarija sa višekomornim profilom i dvostrukim staklom zatvara te gubitke, a polovinu troška može da pokrije subvencija.</p>
+    </div>
+    <div class="pain-list">
+      <div class="pain-item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.6 4.6A2 2 0 1111 8H2M12.6 19.4A2 2 0 1014 16H2M17.5 8a2.5 2.5 0 112 4H2"/></svg></span>
+        <div><h3>Promaja pored prozora</h3><p>Osetiš je rukom kad stojiš uz staklo, čak i kad je sve zatvoreno.</p></div>
+      </div>
+      <div class="pain-item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l5.7 5.7a8 8 0 11-11.4 0z"/></svg></span>
+        <div><h3>Kondenz i vlaga na staklu</h3><p>Ujutru mokar okvir, vremenom crne fleke u uglovima.</p></div>
+      </div>
+      <div class="pain-item">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5zM19 5a10 10 0 010 14M15.5 8.5a5 5 0 010 7"/></svg></span>
+        <div><h3>Buka sa ulice</h3><p>Saobraćaj se čuje kao da je prozor otvoren.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="proizvodi">
   <div class="wrap">
-    <p>Zimi grejanje radi po ceo dan, a soba se opet ne zagreje. Kroz staru fugu na prozoru ulazi promaja koju ne možeš da zaustaviš krpom. <strong>To nije problem kotla, to je problem stolarije.</strong></p>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Proizvodi</span>
+        <h2>Dva materijala, izrada po meri svakog otvora</h2>
+      </div>
+      <p>Sve izrađujemo u sopstvenom pogonu na Elumatec mašinama. Ti biraš profil, staklo i boju, mi predlažemo šta ima smisla za tvoj stan, kuću ili poslovni prostor.</p>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div>
+          <span class="product-tag">01 / PVC</span>
+          <h3>PVC <span>stolarija</span></h3>
+          <p class="product-lead">Najisplativije rešenje za zamenu stare stolarije i za novogradnju. Dobra toplotna i zvučna izolacija uz malo održavanja.</p>
+          <ul class="spec-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Salamander Brugmann profili iz Nemačke</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Višekomorni profil, dvostruko ili trostruko staklo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Otporni na UV, vlagu i visoke temperature</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Širok izbor boja i dekora</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <img src="assets/profil-pvc.jpg" alt="Presek belog PVC profila sa dvostrukim staklom">
+        </div>
+      </article>
+      <article class="product-card">
+        <div>
+          <span class="product-tag">02 / ALU</span>
+          <h3>ALU <span>stolarija</span></h3>
+          <p class="product-lead">Za velike staklene površine, izloge, poslovne objekte i moderne fasade. Tanji profil, više svetla, dug vek.</p>
+          <ul class="spec-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>ALUMIL sistemi</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Termoprekid od 15 do 22 mm, bez znojenja profila</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hladni profili za pregrade i unutrašnja vrata</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Plastifikacija u RAL bojama ili eloksaža</li>
+          </ul>
+        </div>
+        <div class="product-visual">
+          <img src="assets/profil-alu.jpg" alt="Presek tamnog aluminijumskog profila sa termoprekidom">
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
 <section class="services" id="usluge">
   <div class="wrap">
-    <div class="section-head center">
-      <span class="eyebrow">Šta radimo</span>
-      <h2>Sve za otvore na tvom domu, na jednom mestu</h2>
-      <p style="margin-left:auto;margin-right:auto;">Od prvog merenja do poslednjeg vijka - PVC i ALU rešenja koja biraš prema budžetu i potrebama stana ili kuće.</p>
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Usluge</span>
+        <h2>Sve za prozore, vrata i terasu na jednom mestu</h2>
+      </div>
+      <p>Jedan dolazak, jedna ponuda, jedna ekipa. Uz stolariju ugrađujemo i svu prateću opremu, pa ne moraš da tražiš tri različita majstora.</p>
     </div>
     <div class="services-grid">
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="4" y1="12" x2="20" y2="12"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="5" width="24" height="30"/><path d="M20 5v30M8 20h24"/><path d="M4 35h32"/></svg></span>
+          <span class="service-num">01</span>
         </div>
-        <h3>PVC stolarija</h3>
-        <p>Prozori i vrata sa višekomornim profilima i dvostrukim ili trostrukim staklom, za bolju izolaciju i tišinu u stanu.</p>
+        <h3>Zamena stare stolarije</h3>
+        <p>Demontiramo dotrajale prozore i vrata, odnosimo ih i ugrađujemo nove. Besplatno.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
-        </div>
-        <h3>ALU stolarija</h3>
-        <p>Aluminijumski prozori i vrata za velike staklene površine, poslovne prostore i moderne fasade.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21V12h6v9"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 34h32M6 34V14h28v20"/><path d="M13 14v20M20 14v20M27 14v20"/><path d="M4 14l16-8 16 8"/></svg></span>
+          <span class="service-num">02</span>
         </div>
         <h3>Zastakljivanje terase</h3>
-        <p>Pretvaramo otvorenu terasu u koristan prostor koji se greje i ne prašta ceo dan.</p>
+        <p>Otvorena terasa postaje soba koju koristiš i zimi. PVC ili ALU, po tvom izboru.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="15" cy="12" r="0.8" fill="currentColor" stroke="none"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="4" width="20" height="32"/><rect x="14" y="8" width="12" height="10"/><path d="M25 22v4"/></svg></span>
+          <span class="service-num">03</span>
         </div>
         <h3>Ulazna vrata</h3>
-        <p>Sigurnosna ulazna vrata otporna na provalu i vremenske uslove, u PVC ili ALU izvedbi.</p>
+        <p>Pouzdana ulazna vrata u PVC ili ALU izvedbi, po meri otvora.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="19" x2="20" y2="19"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="28" height="6"/><path d="M8 10v24h24V10M8 15h24M8 20h24M8 25h24"/></svg></span>
+          <span class="service-num">04</span>
         </div>
-        <h3>Roletne</h3>
-        <p>Spoljne roletne koje čuvaju sobu od jutarnjeg sunca leti i hladnoće zimi, uz manje buke spolja.</p>
+        <h3>Roletne i venecijaneri</h3>
+        <p>Toplotna, zvučna i svetlosna zaštita za svaku prostoriju.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="28" height="28"/><path d="M6 13h28M6 20h28M6 27h28M13 6v28M20 6v28M27 6v28" stroke-opacity="0.6"/></svg></span>
+          <span class="service-num">05</span>
         </div>
         <h3>Komarnici</h3>
-        <p>Fiksni, rolo i plise komarnici po meri prozora i vrata, bez insekata u kući preko leta.</p>
+        <p>Fiksni, rolo i plise komarnici po meri svakog prozora i balkonskih vrata.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18"/><path d="M3 14h18"/></svg>
+      <div class="service">
+        <div class="service-top">
+          <span class="service-icon"><svg viewBox="0 0 40 40" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 36V12L20 4l16 8v24"/><rect x="9" y="16" width="22" height="20"/><path d="M9 21h22M9 26h22M9 31h22"/></svg></span>
+          <span class="service-num">06</span>
         </div>
         <h3>Rolo i segmentna vrata</h3>
-        <p>Garažna rolo i segmentna vrata za kuće, dvorišta i poslovne objekte, otporna na svakodnevnu upotrebu.</p>
+        <p>Garažna vrata za kuće, dvorišta i poslovne objekte, sa montažom i podešavanjem.</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L17.5 20 12 17l-5.5 3 1-6.5L3 9l6-1z"/></svg>
-        </div>
-        <h3>Merenje i konsultacije</h3>
-        <p>Izlazak na teren, merenje i predlog rešenja pre nego što bilo šta poručiš ili platiš.</p>
+<section class="free on-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Uz svaku porudžbinu</span>
+        <h2>Plaćaš stolariju. Ostalo je na nama.</h2>
       </div>
-
+      <p>Ove četiri stavke kod drugih često stoje kao posebna linija na računu. Kod nas ih nema u ceni, bez obzira na broj prozora.</p>
+    </div>
+    <div class="free-grid">
+      <div class="free-item">
+        <span class="free-badge">0 RSD</span>
+        <h3>Konsultacije i merenje</h3>
+        <p>Dolazimo na adresu, merimo svaki otvor i predlažemo rešenje pre ponude.</p>
+      </div>
+      <div class="free-item">
+        <span class="free-badge">0 RSD</span>
+        <h3>Isporuka</h3>
+        <p>Dovozimo stolariju na teritoriji cele Srbije.</p>
+      </div>
+      <div class="free-item">
+        <span class="free-badge">0 RSD</span>
+        <h3>Demontaža stare</h3>
+        <p>Vadimo stare prozore i vrata i odnosimo ih sa objekta.</p>
+      </div>
+      <div class="free-item">
+        <span class="free-badge">0 RSD</span>
+        <h3>Montaža</h3>
+        <p>Ugradnja je uključena u cenu, bez posebne stavke za rad.</p>
+      </div>
+    </div>
+    <div class="free-bottom">
+      <div class="free-wide">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><h3>Dugogodišnja garancija</h3><p>Nemački kvalitet profila i dugogodišnja garancija na stolariju.</p></div>
+      </div>
+      <div class="free-wide">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L2 12V2h10l8.6 8.6a2 2 0 010 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg>
+        <div><h3>Popust za veće porudžbine</h3><p>Za cele kuće, zgrade i poslovne objekte dajemo posebne uslove.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="subvention" id="subvencije">
-  <div class="wrap">
-    <div class="subvention-box">
-      <div class="subvention-image">
-        <img src="assets/Subvencije-za-gradjane-manji-DEF.jpg" alt="Zvanična oznaka programa subvencija za građane za mere energetske efikasnosti">
+  <div class="wrap sub-grid">
+    <div class="sub-intro">
+      <span class="eyebrow">Subvencije za energetsku efikasnost</span>
+      <div class="sub-big"><b>50%</b><span>troška zamene stolarije pokriva opština</span></div>
+      <h2>Polovinu računa za nove prozore vraća država</h2>
+      <p>Program subvencija za građane pokriva pola troška zamene prozora i vrata. Mi pripremamo predračun i potrebne papire, ti samo predaješ prijavu.</p>
+      <div class="sub-amounts">
+        <div class="sub-amount"><small>Stan</small><b>do 180.000 RSD</b><span>za račun do 360.000 RSD</span></div>
+        <div class="sub-amount"><small>Kuća</small><b>do 200.000 RSD</b><span>za račun do 400.000 RSD</span></div>
       </div>
-      <div class="subvention-text">
-        <span class="eyebrow">Državna subvencija</span>
-        <span class="subvention-number">do 200.000 RSD</span>
-        <h2>Deo troška zamene stolarije ti vraća država</h2>
-        <p>Program subvencija za energetsku efikasnost pokriva deo troška zamene prozora i vrata. Objasnimo ti tačno na šta imaš pravo i kroz koju opštinu se prijavljuješ.</p>
-        <p>Ne moraš sam da se snalaziš u papirologiji - kroz proces te vodimo od početka do isplate.</p>
-        <a href="#kontakt" class="btn btn-primary" style="margin-top: 10px;">Proveri da li imaš pravo na subvenciju</a>
+      <p class="sub-example">Primer: stolarija za kuću košta <strong>400.000 RSD</strong>. Subvencija pokriva <strong>200.000 RSD</strong>, ti plaćaš <strong>200.000 RSD</strong>. Ako je račun veći, doplaćuješ samo razliku.</p>
+      <a href="#kontakt" class="btn btn-primary">
+        Proveri da li imaš pravo na subvenciju
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div>
+      <div class="sub-panel">
+        <h3>Uslovi za prijavu</h3>
+        <ul class="check-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Nekretnina je legalizovana ili imaš dokaz o vlasništvu</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Vlasnik je prijavljen na toj adresi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Menjaju se svi prozori i vrata u stanu ili kući</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Predračun za stolariju izdaje Nikal Plus</li>
+        </ul>
+      </div>
+      <div class="sub-panel">
+        <h3>Opštine u kojima radimo po programu</h3>
+        <div class="chips">
+          <span class="chip">Smederevska Palanka</span>
+          <span class="chip">Novi Beograd</span>
+          <span class="chip">Zemun</span>
+          <span class="chip">Rakovica</span>
+        </div>
+        <p class="sub-note">Konkursi se otvaraju po opštinama i traju dok ima sredstava. Pozovi nas da ti kažemo da li je konkurs u tvojoj opštini trenutno otvoren.</p>
+      </div>
+      <div class="sub-panel sub-doc">
+        <img src="assets/Subvencije-za-gradjane-manji-DEF.jpg" alt="Zvanični vizual programa Subvencije za građane za mere energetske efikasnosti">
+        <p>Program sprovodi Ministarstvo rudarstva i energetike uz podršku Svetske banke, preko lokalnih samouprava.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kako radimo</span>
+        <h2>Od poziva do ugrađenog prozora u četiri koraka</h2>
+      </div>
+      <p>Znaš šta sledi i ko ti dolazi na vrata. Isti ljudi vode posao od merenja do poslednjeg vijka.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Poziv ili upit</h3>
+        <p>Javiš nam šta menjaš i gde. Dogovaramo termin za izlazak na teren.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Merenje i ponuda</h3>
+        <p>Merimo svaki otvor, predlažemo profil i staklo i šaljemo tačnu ponudu.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Izrada u pogonu</h3>
+        <p>Stolariju pravimo po meri u našem pogonu u Smederevskoj Palanci.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Demontaža i montaža</h3>
+        <p>Vadimo staru stolariju, ugrađujemo novu i ostavljamo čist prostor.</p>
       </div>
     </div>
   </div>
@@ -784,133 +1588,252 @@
 
 <section class="about" id="o-nama">
   <div class="wrap about-grid">
-    <div class="about-images">
-      <img class="tall" src="assets/IMG_2073-scaled.jpg" alt="Poslovni objekat sa PVC i ALU stolarijom koju je ugradio Nikal Plus">
-      <img class="short" src="assets/WhatsApp-Image-2020-02-20-at-16.48.07.jpeg" alt="Presek profila ALU stolarije u tamnoj boji">
-      <img class="short" src="assets/WhatsApp-Image-2020-02-20-at-18.48.01-1.jpeg" alt="Presek profila belе PVC stolarije sa dvostrukim staklom">
+    <div class="about-visual">
+      <img class="main" src="assets/IMG_2073-scaled.jpg" alt="Poslovni objekat sa stolarijom koju je ugradio Nikal Plus">
+      <img class="inset" src="assets/galerija/sl26.jpg" alt="Aluminijumska vrata i pregrade ugrađene u poslovnom prostoru" style="object-position: center 60%;">
+      <div class="about-stamp"><small>Tradicija od</small><b>1998.</b></div>
     </div>
     <div class="about-text">
       <span class="eyebrow">O nama</span>
       <h2>Sami proizvodimo, sami ugrađujemo</h2>
-      <p>Nikal Plus je proizvođač i izvođač PVC i ALU stolarije iz Smederevske Palanke. Prozori, vrata, roletne i komarnici izlaze iz naše proizvodnje i stižu na tvoju adresu bez posrednika između.</p>
-      <p>To znači jedan broj telefona za sve - od merenja, preko izrade, do montaže i eventualne reklamacije.</p>
-      <div class="about-points">
-        <div class="about-point">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Radimo na terenu Smederevske Palanke i Beograda</span>
-        </div>
-        <div class="about-point">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Proizvodnja i montaža pod istim krovom</span>
-        </div>
-        <div class="about-point">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          <span>Pomoć oko subvencije od prijave do isplate</span>
-        </div>
+      <p>Nikal Plus je osnovan u avgustu 2012. u Smederevskoj Palanci, a porodični zanat traje od 1998. Radimo izradu i montažu PVC i ALU stolarije za kuće, stanove i poslovne objekte u Srbiji i inostranstvu.</p>
+      <p>Pogon je opremljen Elumatec mašinama. Profile uzimamo od proizvođača kao što su Salamander, REHAU, ALUMIL i INOUTIC. Posao vode Srba Đuričić, diplomirani mašinski inženjer, i Aleksandar Đuričić, građevinski inženjer.</p>
+      <div class="timeline">
+        <div class="tl-item"><b>1998</b><span>Početak porodičnog zanata</span></div>
+        <div class="tl-item"><b>2012</b><span>Osnovan Nikal Plus u Palanci</span></div>
+        <div class="tl-item"><b>Elumatec</b><span>Mašine u našem pogonu</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-close" id="kontakt">
-  <div class="wrap cta-grid">
-    <div>
-      <span class="eyebrow" style="color:#ffb3b3;">Kontakt</span>
-      <h2>Pošalji upit, mi te zovemo za merenje</h2>
-      <p>Reci nam šta menjaš i koliko otvora imaš. Vraćamo se sa ponudom i predlogom termina za izlazak na teren.</p>
-      <div class="cta-contact-list">
-        <div class="cta-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Smederevska Palanka, Srbija</span>
-        </div>
-        <div class="cta-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          <span>Odgovaramo na svaki upit poslat kroz formu</span>
-        </div>
-        <div class="cta-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          <span>Merenje na terenu dogovaramo u roku od par dana</span>
-        </div>
+<section class="gallery" id="radovi">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Naši radovi</span>
+        <h2>Od porodične kuće do staklene fasade</h2>
+      </div>
+      <p>Deo objekata na kojima smo radili stolariju, zastakljivanje i fasade. Klikni na fotografiju da je vidiš u punoj veličini.</p>
+    </div>
+    <div class="gal-grid">
+      <button class="gal-item big" data-src="assets/galerija/sl31.jpg"><img src="assets/galerija/sl31.jpg" alt="Poslovna zgrada sa staklenom ALU fasadom"><span>Staklena ALU fasada, poslovni objekat</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl16.jpg"><img src="assets/galerija/sl16.jpg" alt="Porodična kuća sa novim belim PVC prozorima"><span>PVC prozori, porodična kuća</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl20.jpg"><img src="assets/galerija/sl20.jpg" alt="Fasada sa PVC balkonskim vratima i spoljnim roletnama"><span>Balkonska vrata i roletne</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl21.jpg"><img src="assets/galerija/sl21.jpg" alt="Zastakljena terasa na zgradi sa belom PVC stolarijom"><span>Zastakljena terasa</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl07-1.jpg"><img src="assets/galerija/sl07-1.jpg" alt="Zastakljen hodnik sa ALU konstrukcijom i krovnim staklom"><span>Zastakljen hodnik sa krovom</span></button>
+      <button class="gal-item wide" data-src="assets/galerija/sl30.jpg"><img src="assets/galerija/sl30.jpg" alt="Lučni stakleni krovovi od aluminijuma na objektu u Beogradu" style="object-position: center 70%;"><span>Lučni stakleni krovovi, Beograd</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl37.jpg"><img src="assets/galerija/sl37.jpg" alt="Dvospratna kuća sa novom belom stolarijom i balkonom"><span>Stolarija za dvospratnu kuću</span></button>
+      <button class="gal-item" data-src="assets/galerija/sl15.jpg"><img src="assets/galerija/sl15.jpg" alt="Kuća od fasadne cigle sa belim PVC prozorima"><span>PVC prozori, kuća od cigle</span></button>
+    </div>
+
+    <div class="clients">
+      <span class="clients-label">Radili smo i za</span>
+      <div class="clients-logos">
+        <img src="assets/ref/nis-gazprom-neft.jpg" alt="NIS Gazprom Neft">
+        <img src="assets/ref/delta-inzenjering.jpg" alt="Delta inženjering">
+        <img src="assets/ref/tigar.jpg" alt="Tigar">
+        <img src="assets/ref/fiat.png" alt="FIAT">
       </div>
     </div>
-    <div class="cta-form">
+  </div>
+</section>
+
+<section class="contact on-dark" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Kontakt</span>
+      <h2>Pošalji upit, mi dolazimo na merenje</h2>
+      <p class="contact-lead">Reci nam šta menjaš i koliko otvora imaš. Javljamo se sa predlogom termina za izlazak na teren. Merenje ne košta ništa i ne obavezuje te na porudžbinu.</p>
+      <div class="people">
+        <div class="person">
+          <small>Smederevska Palanka</small>
+          <h3>Srba Đuričić</h3>
+          <span class="role">dipl. mašinski inženjer</span>
+          <a class="tel" href="tel:+38162238409"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>062/238-409</a>
+          <a class="mail" href="mailto:srba.djuricic@gmail.com">srba.djuricic@gmail.com</a>
+        </div>
+        <div class="person">
+          <small>Beograd</small>
+          <h3>Aleksandar Đuričić</h3>
+          <span class="role">građevinski inženjer</span>
+          <a class="tel" href="tel:+381649098597"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>064/909-8597</a>
+          <a class="mail" href="mailto:nikalplus.sp@gmail.com">nikalplus.sp@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-meta">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Majora Gavrilovića bb, Smederevska Palanka</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Radnim danima od 08:00 do 16:00</div>
+      </div>
+    </div>
+    <div class="form-card">
       <h3>Zatraži ponudu za stolariju</h3>
+      <p>Popuni formu ili pozovi direktno, kako ti je lakše.</p>
       <form action="#" method="post">
-        <label for="name">Ime i prezime</label>
-        <input type="text" id="name" name="name" placeholder="Unesi ime i prezime">
-        <label for="phone">Telefon</label>
-        <input type="tel" id="phone" name="phone" placeholder="Unesi broj telefona">
-        <label for="message">Šta ti treba</label>
-        <textarea id="message" name="message" placeholder="Npr. zamena 4 prozora i ulaznih vrata na kući u Palanci"></textarea>
-        <button type="submit" class="btn btn-primary">Pošalji upit za ponudu</button>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Ime i prezime</label>
+            <input type="text" id="name" name="name" placeholder="Petar Petrović" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" placeholder="06x xxx xxxx" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="type">Šta ti treba</label>
+            <select id="type" name="type">
+              <option>PVC stolarija</option>
+              <option>ALU stolarija</option>
+              <option>Zastakljivanje terase</option>
+              <option>Ulazna vrata</option>
+              <option>Roletne i komarnici</option>
+              <option>Garažna vrata</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="place">Mesto</label>
+            <input type="text" id="place" name="place" placeholder="npr. Smed. Palanka">
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Poruka</label>
+          <textarea id="message" name="message" placeholder="Npr. zamena 6 prozora i ulaznih vrata na kući, zanima me i subvencija"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Pošalji upit za ponudu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-note">Tvoje podatke koristimo samo da bismo ti poslali ponudu.</p>
       </form>
     </div>
   </div>
 </section>
 
+</main>
+
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-logo">
-        <img src="assets/logo.png" alt="Nikal Plus logo">
-        <p>Proizvođač i izvođač PVC i ALU stolarije iz Smederevske Palanke. Prozori, vrata, roletne i komarnici po meri.</p>
+      <div>
+        <a href="#top" class="footer-logo"><img src="assets/logo.png" alt="Nikal Plus logo"></a>
+        <p>Proizvođač i izvođač PVC i ALU stolarije iz Smederevske Palanke. Porodična tradicija od 1998.</p>
       </div>
       <div class="footer-col">
-        <h4>Usluge</h4>
-        <a href="#usluge">PVC stolarija</a>
-        <a href="#usluge">ALU stolarija</a>
+        <h4>Proizvodi</h4>
+        <a href="#proizvodi">PVC stolarija</a>
+        <a href="#proizvodi">ALU stolarija</a>
         <a href="#usluge">Roletne i komarnici</a>
-        <a href="#subvencije">Subvencije</a>
+        <a href="#usluge">Garažna vrata</a>
       </div>
       <div class="footer-col">
-        <h4>Kompanija</h4>
+        <h4>Firma</h4>
         <a href="#o-nama">O nama</a>
+        <a href="#radovi">Naši radovi</a>
+        <a href="#subvencije">Subvencije</a>
         <a href="#kontakt">Kontakt</a>
-        <a href="#">Politika privatnosti</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+38162238409">062/238-409</a>
+        <a href="tel:+381649098597">064/909-8597</a>
+        <a href="mailto:srba.djuricic@gmail.com">srba.djuricic@gmail.com</a>
+        <span>Majora Gavrilovića bb, Smederevska Palanka</span>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2024 Nikal Plus. Sva prava zadržana.</span>
-      <span>Smederevska Palanka, Srbija</span>
+      <span>© 2026 Nikal Plus. Sva prava zadržana.</span>
+      <a href="#">Politika privatnosti</a>
     </div>
   </div>
 </footer>
+
+<div class="call-bar" id="callBar">
+  <a class="call" href="tel:+38162238409">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+    Pozovi
+  </a>
+  <a class="quote" href="#kontakt">Zatraži ponudu</a>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Zatvori"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Prethodna fotografija"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Sledeća fotografija"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+  <p class="lb-caption" id="lbCaption"></p>
+</div>
 
 <script>
   const burgerBtn = document.getElementById('burgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   burgerBtn.addEventListener('click', () => {
-    burgerBtn.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
+    const open = mobileMenu.classList.toggle('open');
+    burgerBtn.classList.toggle('open', open);
+    burgerBtn.setAttribute('aria-expanded', open);
   });
   document.querySelectorAll('.mobile-menu a').forEach(a => {
     a.addEventListener('click', () => {
       burgerBtn.classList.remove('open');
       mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', false);
     });
   });
 
   const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+  const callBar = document.getElementById('callBar');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+    callBar.classList.toggle('show', window.scrollY > 600);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Galerija - lightbox
+  const items = Array.from(document.querySelectorAll('.gal-item'));
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  let current = 0;
+  const show = (i) => {
+    current = (i + items.length) % items.length;
+    const img = items[current].querySelector('img');
+    lbImg.src = items[current].dataset.src;
+    lbImg.alt = img.alt;
+    lbCaption.textContent = items[current].querySelector('span').textContent;
+  };
+  const close = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); };
+  items.forEach((el, i) => el.addEventListener('click', () => {
+    show(i);
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+  }));
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', () => show(current - 1));
+  document.getElementById('lbNext').addEventListener('click', () => show(current + 1));
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
   });
 
+  // Blagi pomeraj pri skrolu - sadržaj je uvek vidljiv i bez JS-a
   if ('IntersectionObserver' in window) {
-    const revealEls = document.querySelectorAll('.service-card, .about-images img, .subvention-box');
-    revealEls.forEach(el => el.classList.add('reveal', 'pre'));
-    const observer = new IntersectionObserver((entries) => {
+    const els = document.querySelectorAll('.product-card, .service, .free-item, .step, .gal-item, .pain-item, .sub-panel, .person');
+    els.forEach(el => el.classList.add('reveal', 'pre'));
+    const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          entry.target.classList.remove('pre');
           entry.target.classList.add('in');
-          observer.unobserve(entry.target);
+          io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
-    revealEls.forEach(el => observer.observe(el));
+    }, { threshold: 0.12 });
+    els.forEach(el => io.observe(el));
   }
 </script>
 
